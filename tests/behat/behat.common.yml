@@ -1,0 +1,12 @@
+imports:
+    - ../../modules/panopoly/panopoly_test/tests/behat.common.yml
+
+default:
+  suites:
+    default:
+      paths:
+        - 'features'
+        - '../../modules/panopoly/panopoly_test/tests/features'
+#extensions:
+#    Behat\MinkExtension:
+#      files_path: ./

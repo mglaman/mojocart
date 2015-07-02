@@ -1,0 +1,3 @@
+tests/behat/vendor
+tests/behat/bin
+tests/behat/behat.yml
