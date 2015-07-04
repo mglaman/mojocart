@@ -3,9 +3,9 @@ imports:
 
 default:
   extensions:
-    Behat\MinkExtension\Extension:
+    Behat\MinkExtension:
       base_url: http://${drupal.uri}
-    Drupal\DrupalExtension\Extension:
+    Drupal\DrupalExtension:
       drush:
         root: ${drush.root}
       drupal:
