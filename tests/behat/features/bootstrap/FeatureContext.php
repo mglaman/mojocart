@@ -12,24 +12,37 @@ use Behat\Behat\Context\SnippetAcceptingContext;
  */
 class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext {
   /**
-   * Initializes context.
-   * Every scenario gets its own context object.
+   * @AfterStep
    *
-   * @param array $parameters
-   *   Context parameters (set them in behat.yml)
+   * Take a screen shot after failed steps for Selenium drivers (e.g.
+   * PhantomJs).
    */
-  public function __construct() {
-    // Initialize your context here
+  public function takeScreenshotAfterFailedStep(\Behat\Behat\Hook\Scope\AfterStepScope $event) {
+    if ($event->getTestResult()->isPassed()) {
+      // Not a failed step.
+      return;
+    }
+    if ($this->getSession()->getDriver() instanceof \Behat\Mink\Driver\Selenium2Driver) {
+      $file_name = 'behat-failed-step.png';
+      $screenshot = $this->getSession()->getDriver()->getScreenshot();
+      file_put_contents($file_name, $screenshot);
+      print "Screenshot for failed step created in $file_name";
+    }
   }
 
-//
-// Place your definition and hook methods here:
-//
-//  /**
-//   * @Given I have done something with :stuff
-//   */
-//  public function iHaveDoneSomethingWith($stuff) {
-//    doSomethingWith($stuff);
-//  }
-//
+  /**
+   * Take screenshot when step fails.
+   *
+   * @param \Behat\Behat\Hook\Scope\AfterStepScope $event
+   *
+   * @AfterStep
+   */
+  public function saveHTMLAfterFailedStep(\Behat\Behat\Hook\Scope\AfterStepScope $event)
+  {
+    if (!$event->getTestResult()->isPassed()) {
+      /** @var GuzzleHttp\Stream\Stream $output */
+      $output = $this->getSession()->getDriver()->getContent();
+      file_put_contents('behat-step-failed.html', $output);
+    }
+  }
 }
