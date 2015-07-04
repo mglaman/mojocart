@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the MojoCart Core feature.
  */
+
+include_once 'mojocart_core.features.inc';
