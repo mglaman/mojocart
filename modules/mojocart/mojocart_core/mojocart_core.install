@@ -1,0 +1,9 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function mojocart_core_install() {
+  // For some reason this gets set to TRUE, possibly due to Views Megarow.
+  variable_set('page_manager_node_edit_disabled', FALSE);
+}
