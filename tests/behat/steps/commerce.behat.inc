@@ -25,7 +25,7 @@ class CommerceSubContext extends DrupalSubContextBase implements DrupalSubContex
    *
    * @var array
    */
-  protected $products;
+  protected $products = array();
 
   /**
    * {@inheritdoc}
