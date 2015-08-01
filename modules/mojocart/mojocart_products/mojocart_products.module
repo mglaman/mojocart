@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the MojoCart Products feature.
+ */
+
+include_once 'mojocart_products.features.inc';

@@ -61,3 +61,4 @@ dependencies[] = commerce_deploy_shipping
 
 ; MojoCart!
 dependencies[] = mojocart_core
+dependencies[] = mojocart_products
