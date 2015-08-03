@@ -12,6 +12,7 @@ projects[panopoly_images][subdir] = panopoly
 
 projects[panopoly_theme][version] = 1.23
 projects[panopoly_theme][subdir] = panopoly
+projects[panopoly_theme][patch][1987386] = https://www.drupal.org/files/issues/panopoly_theme-radix-1987386-22.patch
 
 
 projects[panopoly_magic][version] = 1.23
@@ -72,3 +73,7 @@ projects[commerce_deploy_checkout][subdir] = commerce_deploy
 
 projects[commerce_deploy_backend][version] = 1.0-alpha1
 projects[commerce_deploy_backend][subdir] = commerce_deploy
+
+; MojoCart
+projects[radix_views][version] = 1.0
+projects[radix_views][subdir] = contrib

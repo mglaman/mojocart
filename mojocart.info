@@ -59,6 +59,9 @@ dependencies[] = commerce_deploy_product
 dependencies[] = commerce_deploy_promotions
 dependencies[] = commerce_deploy_shipping
 
+; Contrib
+dependencies[] = radix_views
+
 ; MojoCart!
 dependencies[] = mojocart_core
 dependencies[] = mojocart_products

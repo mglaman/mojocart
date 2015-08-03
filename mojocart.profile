@@ -65,6 +65,9 @@ function mojocart_install_tasks_alter(&$tasks, $install_state) {
   if (!(count(install_find_locales($install_state['parameters']['profile'])) > 1)) {
     $tasks['install_select_locale']['function'] = 'panopoly_core_install_locale_selection';
   }
+
+  // Set radix as the installer theme
+  _mojocart_set_theme('radix_commerce');
 }
 
 /**
@@ -111,5 +114,18 @@ function mojocart_default_content(&$modules) {
     if (isset($files[$module . '_demo'])) {
       $modules[] = $module . '_demo';
     }
+  }
+}
+
+/**
+ * Function to allow override of install theme.
+ */
+function _mojocart_set_theme($target_theme) {
+  if ($GLOBALS['theme'] != $target_theme) {
+    unset($GLOBALS['theme']);
+
+    drupal_static_reset();
+    $GLOBALS['conf']['maintenance_theme'] = $target_theme;
+    _drupal_maintenance_theme();
   }
 }
