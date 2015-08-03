@@ -1,0 +1,68 @@
+//
+// Cart
+//
+.form-item-quantity .form-control {
+  // Reset quantity to not be 100% width.
+  width: auto;
+}
+
+.view-commerce-cart-form,
+.view-commerce-cart-form {
+  // Bootstrap override.
+  table > tbody > tr > td {
+    vertical-align: middle;
+  }
+}
+
+//
+// Checkout
+//
+.checkout-buttons {
+  .button-operator {
+    margin-left: 7px;
+  }
+}
+
+//
+// Commerce Line Item
+//
+.line-item-summary {
+  text-align: right; /* LTR */
+  margin-bottom: 1em;
+  .line-item-quantity {
+    float: left; /* LTR */
+  }
+  .line-item-total-label {
+    font-weight: bold;
+  }
+  .links {
+    margin-top: .5em;
+    clear: left; /* LTR */
+    li.last {
+      padding-right: 0; /* LTR */
+    }
+  }
+}
+
+.commerce-line-item-views-form {
+  .cart-subtotal {
+    text-align: right; /* LTR */
+    font-size: 1.5em;
+  }
+  .commerce-line-item-actions {
+    text-align: right; /* LTR */
+  }
+}
+
+//
+// Order
+//
+.field-name-commerce-order-total {
+  .commerce-price-formatted-components {
+    text-transform: capitalize;
+  }
+}
+
+// Checkout Progress
+.commerce-checkout-progress {
+}
