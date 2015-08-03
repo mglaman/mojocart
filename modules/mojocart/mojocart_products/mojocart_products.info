@@ -4,6 +4,7 @@ core = 7.x
 package = MojoCart
 dependencies[] = commerce_cart
 dependencies[] = commerce_product_reference
+dependencies[] = commerce_search_api
 dependencies[] = ctools
 dependencies[] = defaultconfig
 dependencies[] = features

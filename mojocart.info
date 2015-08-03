@@ -65,3 +65,4 @@ dependencies[] = radix_views
 ; MojoCart!
 dependencies[] = mojocart_core
 dependencies[] = mojocart_products
+dependencies[] = mojocart_catalog

@@ -331,13 +331,14 @@ function mojocart_products_panelizer_defaults() {
   $panelizer->link_to_entity = TRUE;
   $panelizer->extra = array();
   $display = new panels_display();
-  $display->layout = 'radix_bryant_flipped';
+  $display->layout = 'radix_brenham_flipped';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
       'default' => NULL,
       'sidebar' => NULL,
       'contentmain' => NULL,
+      'header' => NULL,
     ),
   );
   $display->cache = array();
@@ -346,22 +347,21 @@ function mojocart_products_panelizer_defaults() {
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
-  $pane->pid = 'new-4c23f2e1-9d28-4bea-9caa-e5790803443b';
+  $pane->pid = 'new-17d0201a-b740-4822-9d8e-7e02de2aba5a';
   $pane->panel = 'contentmain';
-  $pane->type = 'entity_field';
-  $pane->subtype = 'node:body';
+  $pane->type = 'node_title';
+  $pane->subtype = 'node_title';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'label' => 'hidden',
-    'formatter' => 'text_summary_or_trimmed',
-    'delta_limit' => 0,
-    'delta_offset' => '0',
-    'delta_reversed' => FALSE,
-    'formatter_settings' => array(
-      'trim_length' => 600,
-    ),
+    'link' => 1,
+    'markup' => 'h4',
+    'id' => '',
+    'class' => '',
     'context' => 'panelizer',
+    'override_title' => 1,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -371,37 +371,42 @@ function mojocart_products_panelizer_defaults() {
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = '4c23f2e1-9d28-4bea-9caa-e5790803443b';
-  $display->content['new-4c23f2e1-9d28-4bea-9caa-e5790803443b'] = $pane;
-  $display->panels['contentmain'][0] = 'new-4c23f2e1-9d28-4bea-9caa-e5790803443b';
+  $pane->uuid = '17d0201a-b740-4822-9d8e-7e02de2aba5a';
+  $display->content['new-17d0201a-b740-4822-9d8e-7e02de2aba5a'] = $pane;
+  $display->panels['contentmain'][0] = 'new-17d0201a-b740-4822-9d8e-7e02de2aba5a';
   $pane = new stdClass();
-  $pane->pid = 'new-ba21fe8d-d414-4cce-b77e-4e27c87376d4';
-  $pane->panel = 'contentmain';
-  $pane->type = 'node_links';
-  $pane->subtype = 'node_links';
+  $pane->pid = 'new-b36ff3f6-bb8e-4b8b-8dff-1d35aa7b25c4';
+  $pane->panel = 'header';
+  $pane->type = 'entity_field';
+  $pane->subtype = 'node:field_featured_image';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'override_title' => FALSE,
+    'label' => 'hidden',
+    'formatter' => 'image',
+    'delta_limit' => 0,
+    'delta_offset' => '0',
+    'delta_reversed' => FALSE,
+    'formatter_settings' => array(
+      'image_style' => 'panopoly_image_full',
+      'image_link' => 'content',
+    ),
+    'context' => array(),
+    'override_title' => 0,
     'override_title_text' => '',
-    'build_mode' => 'teaser',
-    'identifier' => '',
-    'link' => TRUE,
-    'context' => 'panelizer',
+    'override_title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array(
-    'css_class' => 'link-wrapper',
-  );
+  $pane->css = array();
   $pane->extras = array();
-  $pane->position = 1;
+  $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = 'ba21fe8d-d414-4cce-b77e-4e27c87376d4';
-  $display->content['new-ba21fe8d-d414-4cce-b77e-4e27c87376d4'] = $pane;
-  $display->panels['contentmain'][1] = 'new-ba21fe8d-d414-4cce-b77e-4e27c87376d4';
+  $pane->uuid = 'b36ff3f6-bb8e-4b8b-8dff-1d35aa7b25c4';
+  $display->content['new-b36ff3f6-bb8e-4b8b-8dff-1d35aa7b25c4'] = $pane;
+  $display->panels['header'][0] = 'new-b36ff3f6-bb8e-4b8b-8dff-1d35aa7b25c4';
   $pane = new stdClass();
   $pane->pid = 'new-efd31a91-72d7-4a62-88b7-436f448daff6';
   $pane->panel = 'sidebar';
@@ -420,14 +425,17 @@ function mojocart_products_panelizer_defaults() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => '',
+  );
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
   $pane->uuid = 'efd31a91-72d7-4a62-88b7-436f448daff6';
   $display->content['new-efd31a91-72d7-4a62-88b7-436f448daff6'] = $pane;
   $display->panels['sidebar'][0] = 'new-efd31a91-72d7-4a62-88b7-436f448daff6';
-  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $panelizer->display = $display;
   $export['node:product_display:default:teaser'] = $panelizer;

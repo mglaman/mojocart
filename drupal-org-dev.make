@@ -92,6 +92,11 @@ projects[commerce_deploy_backend][download][type] = git
 projects[commerce_deploy_backend][download][branch] = 7.x-1.x
 projects[commerce_deploy_backend][subdir] = commerce_deploy
 
+; Commerce Contrib
+projects[commerce_search_api][download][type] = git
+projects[commerce_search_api][download][branch] = 7.x-1.x
+projects[commerce_search_api][subdir] = contrib
+
 ; MojoCart
 projects[radix_views][download][type] = git
 projects[radix_views][download][branch] = 7.x-1.x

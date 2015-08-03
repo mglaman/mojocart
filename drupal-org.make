@@ -74,6 +74,10 @@ projects[commerce_deploy_checkout][subdir] = commerce_deploy
 projects[commerce_deploy_backend][version] = 1.0-alpha1
 projects[commerce_deploy_backend][subdir] = commerce_deploy
 
+; Commerce Contrib
+projects[commerce_search_api][version] = 1.4
+projects[commerce_search_api][subdir] = contrib
+
 ; MojoCart
 projects[radix_views][version] = 1.0
 projects[radix_views][subdir] = contrib
