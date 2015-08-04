@@ -11,7 +11,7 @@ function mojocart_install_tasks(&$install_state) {
   $tasks = array();
 
   // Add our custom CSS file for the installation process
-//  drupal_add_css(drupal_get_path('profile', 'panopoly') . '/panopoly.css');
+  drupal_add_css(drupal_get_path('profile', 'mojocart') . '/mojocart.css');
 
   // Add the Panopoly app selection to the installation process
   $panopoly_server = array(

@@ -1,0 +1,15 @@
+body.maintenance-page .navbar {
+  background-color: #673ab7;
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#673ab7),to(#5e35b1));
+  background-image: -webkit-linear-gradient(top,#673ab7 0,#5e35b1 100%);
+  background-image: linear-gradient(to bottom,#673ab7 0,#5e35b1 100%);
+  background-repeat: repeat-x;
+}
+body.maintenance-page a.navbar-brand {
+  color: white;
+}
+body.maintenance-page .progress-bar-info,
+body.maintenance-page .progress.active .progress-bar,
+body.maintenance-page .progress-bar.active{
+    background-color: #673ab7;
+}
