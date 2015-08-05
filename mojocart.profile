@@ -53,6 +53,15 @@ function mojocart_form_install_configure_form_alter(&$form, $form_state) {
 }
 
 /**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Ensures default theme choice to Radix Commerce.
+ */
+function mojocart_form_panopoly_theme_selection_form_alter(&$form, $form_state) {
+  $form['theme_wrapper']['theme']['#default_value'] = 'radix_commerce';
+}
+
+/**
  * Implements hook_install_tasks_alter()
  */
 function mojocart_install_tasks_alter(&$tasks, $install_state) {
