@@ -61,6 +61,7 @@ dependencies[] = commerce_deploy_shipping
 
 ; Contrib
 dependencies[] = radix_views
+dependencies[] = coffee
 
 ; MojoCart!
 dependencies[] = mojocart_core

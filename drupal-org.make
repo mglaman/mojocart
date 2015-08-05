@@ -78,6 +78,13 @@ projects[commerce_deploy_backend][subdir] = commerce_deploy
 projects[commerce_search_api][version] = 1.4
 projects[commerce_search_api][subdir] = contrib
 
+; Contrib
+projects[coffee][subdir] = contrib
+projects[coffee][download][type] = git
+projects[coffee][download][revision] = 40d33e6
+projects[coffee][download][branch] = 7.x-2.x
+projects[coffee][patch][2453585] = https://www.drupal.org/files/issues/local_storage_for_coffee-2453585-7.patch
+
 ; MojoCart
 projects[radix_views][version] = 1.0
 projects[radix_views][subdir] = contrib
