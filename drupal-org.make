@@ -78,6 +78,12 @@ projects[commerce_deploy_backend][subdir] = commerce_deploy
 projects[commerce_search_api][version] = 1.4
 projects[commerce_search_api][subdir] = contrib
 
+projects[commerce_page_manager][version] = 1.x
+projects[commerce_page_manager][subdir] = contrib
+projects[commerce_page_manager][download][type] = git
+projects[commerce_page_manager][download][revision] = dd604e1
+projects[commerce_page_manager][download][branch] = 7.x-1.x
+
 ; Contrib
 projects[coffee][subdir] = contrib
 projects[coffee][download][type] = git
