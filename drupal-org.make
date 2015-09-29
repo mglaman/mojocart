@@ -70,6 +70,10 @@ projects[commerce_deploy_customer][subdir] = commerce_deploy
 
 projects[commerce_deploy_checkout][version] = 1.0-alpha4
 projects[commerce_deploy_checkout][subdir] = commerce_deploy
+projects[commerce_deploy_checkout][download][type] = git
+projects[commerce_deploy_checkout][download][revision] = 43236d0
+projects[commerce_deploy_checkout][download][branch] = 7.x-1.x
+
 
 projects[commerce_deploy_backend][version] = 1.0-alpha4
 projects[commerce_deploy_backend][subdir] = commerce_deploy
