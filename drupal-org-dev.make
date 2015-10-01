@@ -97,6 +97,11 @@ projects[commerce_search_api][download][type] = git
 projects[commerce_search_api][download][branch] = 7.x-1.x
 projects[commerce_search_api][subdir] = contrib
 
+projects[commerce_migrate][download][type] = git
+projects[commerce_migrate][download][branch] = 7.x-1.x
+projects[commerce_migrate][patch][1931302] = https://www.drupal.org/files/commerce_products_source_migration-1931302-2.patch
+projects[commerce_migrate][subdir] = contrib
+
 ; MojoCart
 projects[radix_views][download][type] = git
 projects[radix_views][download][branch] = 7.x-1.x

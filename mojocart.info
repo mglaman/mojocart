@@ -65,5 +65,6 @@ dependencies[] = coffee
 
 ; MojoCart!
 dependencies[] = mojocart_core
+dependencies[] = mojocart_demo
 dependencies[] = mojocart_products
 dependencies[] = mojocart_catalog

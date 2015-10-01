@@ -1,0 +1,13 @@
+name = MojoCart Demo
+description = Demo content to display MojoCart
+core = 7.x
+package = MojoCart
+dependencies[] = commerce_migrate
+dependencies[] = migrate
+dependencies[] = migrate_extras
+dependencies[] = mojocart_catalog
+dependencies[] = mojocart_core
+dependencies[] = mojocart_products
+files[] = import/mojocart_demo.migrate.inc
+files[] = import/mojocart_demo.node.inc
+files[] = import/mojocart_demo.products.inc

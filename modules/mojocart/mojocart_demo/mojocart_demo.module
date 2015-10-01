@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * MojoCart Demo module.
+ */
+
+/**
+ * Implements hook_migrate_api().
+ */
+function mojocart_demo_migrate_api() {
+  return array(
+    'api' => 2,
+    'groups' => array(
+      'mojocart_demo' => array(
+        'title' => t('MojoCart Demo'),
+      ),
+    ),
+    'migrations' => array(
+      'MojoCartDemoProducts' => array(
+        'class_name' => 'MojoCartDemoProducts',
+        'group_name' => 'mojocart_demo',
+      ),
+      'MojoCartDemoProductDisplays' => array(
+        'class_name' => 'MojoCartDemoProductDisplays',
+        'group_name' => 'mojocart_demo',
+      ),
+    ),
+  );
+}

@@ -78,6 +78,10 @@ projects[commerce_deploy_backend][subdir] = commerce_deploy
 projects[commerce_search_api][version] = 1.4
 projects[commerce_search_api][subdir] = contrib
 
+projects[commerce_migrate][version] = 1.1
+projects[commerce_migrate][subdir] = contrib
+projects[commerce_migrate][patch][1931302] = https://www.drupal.org/files/commerce_products_source_migration-1931302-2.patch
+
 ; Contrib
 projects[coffee][subdir] = contrib
 projects[coffee][download][type] = git

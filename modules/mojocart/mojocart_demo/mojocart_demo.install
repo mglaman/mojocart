@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Install file for MojoCart demo.
+ */
+
+/**
+ * Implements hook_enable().
+ */
+function mojocart_demo_enable() {
+  _panopoly_core_import_demo_content(array('MojoCartDemoProducts', 'MojoCartDemoProductDisplays'));
+}
+
+/**
+ * Implements hook_disable().
+ */
+function mojocart_demo_disable() {
+  _panopoly_core_rollback_demo_content(array('MojoCartDemoProducts', 'MojoCartDemoProductDisplays'));
+}
