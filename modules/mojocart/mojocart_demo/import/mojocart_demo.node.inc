@@ -36,6 +36,12 @@ class MojoCartDemoProductDisplays extends MojoCartDemoMigrateBase {
     $this->addFieldMapping('uid', 'uid')->defaultValue(1);
 
     $this->addFieldMapping('title', 'title');
+    $this->addFieldMapping('field_featured_image', 'image');
+    $this->addFieldMapping('field_featured_image:file_replace')
+         ->defaultValue(FILE_EXISTS_REPLACE);
+    // For now re-use Panopoly Demo images
+    $this->addFieldMapping('field_featured_image:source_dir')
+         ->defaultValue(drupal_get_path('module', 'panopoly_demo') . '/import/images');
     $this->addFieldMapping('body', 'description');
     $this->addFieldMapping('body:summary', 'excerpt');
     $this->addFieldMapping('field_catalog', 'category');
@@ -58,7 +64,6 @@ class MojoCartDemoProductDisplays extends MojoCartDemoMigrateBase {
       }
       $products[] = $product->product_id;
     }
-    print_r($products);
     $row->products = $products;
   }
 
@@ -67,9 +72,10 @@ class MojoCartDemoProductDisplays extends MojoCartDemoMigrateBase {
    */
   function csvColumns() {
     $columns[0] = array('title', 'Title');
-    $columns[1] = array('description', 'Description');
+    $columns[1] = array('image', 'Image');
     $columns[2] = array('category', 'Category');
     $columns[3] = array('sku', 'SKU');
+    $columns[4] = array('description', 'Description');
     return $columns;
   }
 }

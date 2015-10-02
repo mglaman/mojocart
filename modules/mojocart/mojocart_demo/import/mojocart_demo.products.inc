@@ -55,5 +55,6 @@ class MojoCartDemoProducts extends MojoCartDemoMigrateBase {
     $row->status = 1;
     $row->uid = 1;
     $row->language = LANGUAGE_NONE;
+    $row->sku = trim($row->sku);
   }
 }

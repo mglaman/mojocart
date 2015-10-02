@@ -25,6 +25,10 @@ function mojocart_demo_migrate_api() {
         'class_name' => 'MojoCartDemoProductDisplays',
         'group_name' => 'mojocart_demo',
       ),
+      'MojoCartDemoMenu' => array(
+        'class_name' => 'MojoCartDemoMenu',
+        'group_name' => 'mojocart_demo',
+      ),
     ),
   );
 }
