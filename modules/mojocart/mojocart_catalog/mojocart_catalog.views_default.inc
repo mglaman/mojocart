@@ -46,15 +46,13 @@ function mojocart_catalog_views_default_views() {
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_product_display';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  /* Contextual filter: Catalog: Term ID (indexed) */
+  /* Contextual filter: Broken/missing handler */
   $handler->display->display_options['arguments']['field_catalog_tid']['id'] = 'field_catalog_tid';
   $handler->display->display_options['arguments']['field_catalog_tid']['table'] = 'search_api_index_product_display';
   $handler->display->display_options['arguments']['field_catalog_tid']['field'] = 'field_catalog_tid';
   $handler->display->display_options['arguments']['field_catalog_tid']['default_action'] = 'default';
   $handler->display->display_options['arguments']['field_catalog_tid']['default_argument_type'] = 'taxonomy_tid';
   $handler->display->display_options['arguments']['field_catalog_tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_catalog_tid']['break_phrase'] = 0;
-  $handler->display->display_options['arguments']['field_catalog_tid']['not'] = 0;
   /* Filter criterion: Indexed Node: Status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_product_display';
