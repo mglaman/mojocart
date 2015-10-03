@@ -56,12 +56,12 @@ function mojocart_products_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 31,
+      'weight' => 3,
     ),
   );
 
-  // Exported field_instance: 'node-product_display-field_catalog'
-  $field_instances['node-product_display-field_catalog'] = array(
+  // Exported field_instance: 'node-product_display-field_catalog_section'
+  $field_instances['node-product_display-field_catalog_section'] = array(
     'bundle' => 'product_display',
     'default_value' => NULL,
     'deleted' => 0,
@@ -88,10 +88,10 @@ function mojocart_products_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_catalog',
-    'label' => 'Catalog',
+    'field_name' => 'field_catalog_section',
+    'label' => 'Catalog Section',
     'product_catalog' => 1,
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -100,7 +100,7 @@ function mojocart_products_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 34,
+      'weight' => 5,
     ),
   );
 
@@ -184,7 +184,7 @@ function mojocart_products_field_default_field_instances() {
         'manualcrop_thumblist' => 0,
       ),
       'type' => 'media_generic',
-      'weight' => 33,
+      'weight' => 4,
     ),
   );
 
@@ -251,14 +251,14 @@ function mojocart_products_field_default_field_instances() {
         ),
       ),
       'type' => 'inline_entity_form',
-      'weight' => 0,
+      'weight' => 1,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
-  t('Catalog');
+  t('Catalog Section');
   t('Image');
   t('Products');
 

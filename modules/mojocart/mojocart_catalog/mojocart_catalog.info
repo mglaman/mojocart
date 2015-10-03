@@ -21,7 +21,6 @@ features[facetapi][] = search_api@product_display::field_product:type
 features[facetapi][] = search_api@product_display:block:field_product:commerce_price:amount_decimal
 features[facetapi][] = search_api@product_display:block:field_product:type
 features[features_api][] = api:2
-features[field_base][] = field_catalog
 features[features_override_items][] = search_api_index.product_display
 features[features_overrides][] = search_api_index.product_display.options|additional fields
 features[features_overrides][] = search_api_index.product_display.options|data_alter_callbacks|search_api_alter_add_aggregation|settings|fields|search_api_aggregation_2|description
