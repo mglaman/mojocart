@@ -44,8 +44,8 @@ class MojoCartDemoProductDisplays extends MojoCartDemoMigrateBase {
          ->defaultValue(drupal_get_path('module', 'panopoly_demo') . '/import/images');
     $this->addFieldMapping('body', 'description');
     $this->addFieldMapping('body:summary', 'excerpt');
-    $this->addFieldMapping('field_catalog', 'category');
-    $this->addFieldMapping('field_catalog:create_term')
+    $this->addFieldMapping('field_catalog_section', 'category');
+    $this->addFieldMapping('field_catalog_section:create_term')
          ->defaultValue(TRUE);
     $this->addFieldMapping('field_product', 'products');
   }
