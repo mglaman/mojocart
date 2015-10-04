@@ -6,7 +6,6 @@ default:
     default:
       paths:
         - 'features'
-        - '../../modules/panopoly/panopoly_test/tests/features'
   extensions:
     Drupal\DrupalExtension:
       region_map:
