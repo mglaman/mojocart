@@ -14,6 +14,9 @@ drush en -y panopoly_test
 # Our tests require diff for `drush features-diff`
 drush en -y diff
 
+# Enable MojoCart Demo
+drush en -y mojocart_demo
+
 # Clear caches and run a web server.
 drupal_ti_clear_caches
 drupal_ti_run_server

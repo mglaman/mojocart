@@ -43,3 +43,4 @@ features[panelizer_defaults][] = node:product_display:default
 features[panelizer_defaults][] = node:product_display:default:default
 features[panelizer_defaults][] = node:product_display:default:teaser
 features[variable][] = panelizer_defaults_node_product_display
+features_exclude[field_base][field_catalog] = field_catalog
