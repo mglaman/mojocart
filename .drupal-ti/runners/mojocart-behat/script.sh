@@ -7,10 +7,9 @@ set -e $DRUPAL_TI_DEBUG
 # Ensure we are in the right directory.
 cd "$DRUPAL_TI_DRUPAL_DIR"
 
-# If this isn't an upgrade, we test if any features are overridden.
 if [[ "$UPGRADE" == none ]]
 then
-	"$TRAVIS_BUILD_DIR"/scripts/check-overridden.sh
+	DRUSH_ARGS="--root=$DRUPAL_TI_DRUPAL_DIR --uri=$DRUPAL_TI_WEBSERVER_URL:$DRUPAL_TI_WEBSERVER_PORT" "$TRAVIS_BUILD_DIR"/scripts/check-overridden.sh
 fi
 
 mojocart_header Running tests: $TRAVIS_BEHAT

@@ -61,10 +61,7 @@ function mojocart_build_distribution() {
 	cd drupal
 	drush make --yes profiles/mojocart/drupal-org-core.make --prepare-install
 	drush make --yes profiles/mojocart/drupal-org.make --no-core --contrib-destination=profiles/mojocart
-#	if [[ "$UPGRADE" != none ]]; then
-#		drush dl panopoly_demo-1.x-dev
-#	fi
-	drush dl diff
+
 	mkdir -p sites/default/private/files
 	mkdir -p sites/default/private/temp
 
@@ -134,7 +131,6 @@ function drupal_ti_install_drupal() {
 	php -d sendmail_path=$(which true) ~/.composer/vendor/bin/drush.php --yes site-install mojocart --db-url="$DRUPAL_TI_DB_URL" --account-name=admin --account-pass=admin --site-mail=admin@example.com --site-name="MojoCart"
 	drush vset -y file_private_path "sites/default/private/files"
 	drush vset -y file_temporary_path "sites/default/private/temp"
-  drush en -y diff
 
 	# Switch to the MojoCart platform built from Git (if we aren't there already).
 	cd ../drupal

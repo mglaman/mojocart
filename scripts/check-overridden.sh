@@ -3,7 +3,7 @@
 set -e $DRUPAL_TI_DEBUG
 
 : ${DRUSH:=drush}
-: ${DRUSH_ARGS:="--root=$DRUPAL_TI_DRUPAL_DIR --uri=$DRUPAL_TI_WEBSERVER_URL:$DRUPAL_TI_WEBSERVER_PORT"}
+: ${DRUSH_ARGS:=}
 
 # Panopoly Features
 PANOPOLY_FEATURES="panopoly_admin panopoly_core panopoly_demo panopoly_images panopoly_magic panopoly_pages panopoly_search panopoly_theme panopoly_users panopoly_widgets panopoly_wysiwyg"
