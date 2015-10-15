@@ -82,6 +82,11 @@ projects[commerce_page_manager][download][type] = git
 projects[commerce_page_manager][download][revision] = dd604e1
 projects[commerce_page_manager][download][branch] = 7.x-1.x
 
+projects[commerce_responsive_ui][version] = 1.x
+projects[commerce_responsive_ui][subdir] = contrib
+projects[commerce_responsive_ui][download][type] = git
+projects[commerce_responsive_ui][download][revision] = 942cb3d
+projects[commerce_responsive_ui][download][branch] = 7.x-1.x
 ; Contrib
 projects[coffee][subdir] = contrib
 projects[coffee][download][type] = git
